@@ -35,6 +35,7 @@ It’s a special docker container with Nginx reverse proxy, which will be expose
 ### 2. Start new project.
 * Clone this repo to your local machine.
 * Change all occurrences of `CHANGE_ME` in `docker-compose.yml` and `ssh.sh` files.
+
 This needs to be done because all your containers must have a namespace. And you should be able to find anyone of them in list in future. So project name would be good for this.
 
 * Cd to project directory.
@@ -44,6 +45,7 @@ docker-compose up -d
 ``
 
 -d flag here means Demonize mode, you can skip this and will see what happens under the hood.
+
 By default docker compose get all configuration from `docker-compose.yml` file and create all containers defined there.
 
 > **Note:**
