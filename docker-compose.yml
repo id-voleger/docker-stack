@@ -19,7 +19,7 @@ mail:
    - "1025"
    - "8025"
   environment:
-    VIRTUAL_HOST: mail.CHANGE_ME.loc.dev
+    VIRTUAL_HOST: mail.CHANGE_ME.loc
     VIRTUAL_PORT: 8025
 adminer:
   image: clue/adminer
@@ -27,7 +27,7 @@ adminer:
   ports:
    - "80"
   environment:
-    VIRTUAL_HOST: adminer.CHANGE_ME.loc.dev
+    VIRTUAL_HOST: adminer.CHANGE_ME.loc
   links:
     - mysql
 web:
@@ -42,7 +42,7 @@ web:
     - ./docroot/:/var/www
     - ./dummyfile:/tmp/dummyfile
   environment:
-    VIRTUAL_HOST: CHANGE_ME.loc.dev
+    VIRTUAL_HOST: CHANGE_ME.loc
   links:
     - mysql
     - mail
