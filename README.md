@@ -1,15 +1,15 @@
 Docker local dev environment for Drupal
 ===================
-[TOC]
 
 Ubuntu 14.04, 15.04, 15.10 installation
 -------------
-###1. Prepare your local machine.
+### 1. Prepare your local machine.
 * Install docker and Docker compose.
 * Install dnsmasq
 ```
 sudo apt-get install dnsmasq
 ```
+
 Dnsmasq is  a local DNS server which will route all addresses like http://example.loc to your local machine, without any changes to /etc/hosts 
 
 * Edit dnsmasq config:
@@ -39,14 +39,19 @@ This needs to be done because all your containers must have a namespace. And you
 
 * Cd to project directory.
 * Fire up:
-```
+``
 docker-compose up -d
-```
+``
+
 -d flag here means Demonize mode, you can skip this and will see what happens under the hood.
 By default docker compose get all configuration from `docker-compose.yml` file and create all containers defined there.
 
 > **Note:**
+
 > Site will be available on next addresses:
+
 > http://change_me.loc
+
 > http://mail.change_me.loc
+
 > http://adminer.change_me.loc
